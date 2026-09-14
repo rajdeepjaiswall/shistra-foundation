@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SHISTRA FOUNDATION — Education for Social Change</title>
+  <meta name="description" content="Shistra Foundation uses education as a practical instrument for opportunity, capability and social change." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="foundation" data-authed="false">
+  <div id="app">
+    <div id="login-gate" class="login-gate">
+      <div class="login-card">
+        <img src="assets/logo.svg" alt="Shistra Foundation" class="login-logo" />
+        <h1>SHISTRA <span>FOUNDATION</span></h1>
+        <p class="tag">Education for Social Change</p>
+        <p class="login-lead">Sign in to explore programmes, events, community feeds and your membership space.</p>
+        <div class="login-tabs">
+          <button class="login-tab active" data-role="member">Member Login</button>
+          <button class="login-tab" data-role="admin">Admin Login</button>
+        </div>
+        <form id="login-form">
+          <label>Email<input type="email" id="login-email" placeholder="you@example.com" required /></label>
+          <label>Password<input type="password" id="login-password" placeholder="Enter password" required /></label>
+          <p class="hint" id="login-hint">Any email and password works for a member preview.</p>
+          <button type="submit" class="gold-btn">Enter Foundation</button>
+        </form>
+        <button class="text-link" id="guest-enter">Continue as guest</button>
+      </div>
+    </div>
+    <header class="topbar">
+      <button class="icon-btn" id="btn-search" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <div class="brand-block">
+        <div class="flip-wrap" id="brand-flip">
+          <img src="assets/logo.svg" alt="Shistra" class="brand-logo face-a" />
+          <div class="brand-logo face-b zone-mark" id="brand-zone-mark">SF</div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SHISTRA FOUNDATION</div>
+          <div class="brand-sub" id="brand-sub">Education for Social Change</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="btn-menu" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </header>
+    <nav class="desk-nav" aria-label="Primary">
+      <button data-nav="home">Home</button>
+      <button data-nav="notify">Notifications</button>
+      <button class="desk-center" id="desk-zones" aria-label="Play zones"><img src="assets/logo.svg" alt="" /></button>
+      <button data-nav="timeline">Timeline</button>
+      <button data-nav="account" id="desk-account">Login</button>
+    </nav>
+    <div id="search-sheet" class="sheet hidden">
+      <div class="sheet-inner">
+        <input id="search-input" type="search" placeholder="Search programmes, events, blogs, people…" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+    <aside id="drawer" class="drawer" aria-hidden="true">
+      <div class="drawer-head">
+        <img src="assets/logo.svg" alt="" />
+        <div><strong>SHISTRA FOUNDATION</strong><span>Education for Social Change</span></div>
+        <button class="icon-btn" id="drawer-close" aria-label="Close">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <button data-go="about">About Us</button>
+        <button data-go="approach">Our Approach</button>
+        <button data-go="programmes">Programmes</button>
+        <button data-go="partner">Partner With Us</button>
+        <button data-go="volunteer">Volunteer</button>
+        <button data-go="support">Support Us</button>
+        <button data-go="contact">Contact Us</button>
+        <button data-go="founder">The Founder</button>
+        <button data-go="notify">Events &amp; Notifications</button>
+        <button data-go="timeline">Timeline &amp; News</button>
+        <button data-go="wishlist">Wishlist</button>
+      </nav>
+      <div class="drawer-foot">
+        <button class="gold-btn small" id="drawer-login">Member Login</button>
+        <button class="ghost-btn small" id="drawer-admin">Admin Login</button>
+      </div>
+    </aside>
+    <div id="drawer-backdrop" class="backdrop hidden"></div>
+    <main id="main" class="main"></main>
+    <div id="zones" class="zones hidden" aria-hidden="true">
+      <div class="zones-dim"></div>
+      <div class="orbit">
+        <button class="orbit-center" id="orbit-center" data-zone="foundation"><img src="assets/logo.svg" alt="Shistra Foundation" /><span>Shistra</span></button>
+        <button class="orbit-node" data-zone="ai"><span class="orb ai">AI</span><b>AI</b></button>
+        <button class="orbit-node" data-zone="robotics"><span class="orb robotics">RB</span><b>Robotics</b></button>
+        <button class="orbit-node" data-zone="cyber"><span class="orb cyber">CS</span><b>Cyber</b></button>
+        <button class="orbit-node" data-zone="language"><span class="orb language">FL</span><b>Languages</b></button>
+        <button class="orbit-node" data-zone="chess"><span class="orb chess">Ch</span><b>Chess</b></button>
+        <button class="orbit-node" data-zone="vedic"><span class="orb vedic">VM</span><b>Vedic</b></button>
+      </div>
+    </div>
+    <nav class="bottom-nav" aria-label="Mobile">
+      <button data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg><span>Home</span></button>
+      <button data-nav="notify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 1112 0c0 7 3 7 3 9H3c0-2 3-2 3-9"/><path d="M10 21a2 2 0 004 0"/></svg><span>Notify</span></button>
+      <button class="nav-center" id="btn-zones" aria-label="Play zones"><img src="assets/logo.svg" alt="Zones" /></button>
+      <button data-nav="timeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg><span>Timeline</span></button>
+      <button data-nav="account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3 4-4.5 7-4.5S17.6 16 19 19"/></svg><span>Account</span></button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
